@@ -26,10 +26,13 @@ body {
     color: #145ba7;
 }
 
+.button-wrapper {
+    display: inline-block;
+    max-width: 250px;
+}
+
 button {
     font-size: 1.5rem;
-    padding: 10px 20px;
-    margin: 10px;
     color: #fff;
     background-color: #145ba7;
     border: none;
@@ -43,13 +46,28 @@ button:hover {
 
 #start {
     background-color: #27ae60;
+    border-radius: 100% 0 0 0;
+    padding: 65px 15px 45px 35px;
+    width: 120px;
 }
 
 #stop {
     background-color: #c0392b;
+    border-radius: 0 0 0 100%;
+    padding: 45px 15px 65px 35px;
+    width: 120px;
 }
 
 #reset {
-    background-color: #7f8c8d;
+    background-color: #2025b0;
+    border-radius: 0 100% 0 0;
+    padding: 65px 35px 45px 15px;
+    width: 120px;
 }
 
+#input {
+    background-color: #bfcd24;
+    border-radius: 0 0% 100% 0;
+    padding: 45px 35px 65px 15px;
+    width: 120px;
+}
