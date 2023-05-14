@@ -4,7 +4,7 @@ const resetElement = document.getElementById('reset');
 const timerElement = document.getElementById('timer');
 
 let inputMinutes = document.getElementById("inputMinutes");
-let timeLeft;
+let timeLeft = inputMinutes.value * 60;
 let interval;
 
 function updateTimer() {
@@ -16,12 +16,12 @@ function updateTimer() {
 }
 
 function startTimer() {
+    timeLeft = inputMinutes.value * 60;
     interval = setInterval(() => {
-        timeLeft = inputMinutes.value * 60;
         timeLeft--;
         updateTimer();
         if(timeLeft < 0) {
-            timeLeft = inputMinutes.value * 60;
+            // timeLeft = inputMinutes.value * 60;
             alert("Time's up!");
         }
     }, 1000)
