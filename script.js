@@ -3,8 +3,12 @@ const stopElement = document.getElementById('stop');
 const resetElement = document.getElementById('reset');
 const timerElement = document.getElementById('timer');
 
+let inputMinutes = document.getElementById("inputMinutes");
+let timeLeft = inputMinutes.value * 60;
+
+
 let interval;
-let timeLeft = 600;
+
 
 function updateTimer() {
     let minutes = Math.floor(timeLeft / 60);
@@ -20,7 +24,7 @@ function startTimer() {
         updateTimer();
         if(timeLeft < 0) {
             alert("Time's up!");
-            timeLeft = 600;
+            timeLeft = inputMinutes.value * 60;
         }
     }, 1000)
 }
@@ -31,7 +35,7 @@ function stopTimer() {
 
 function resetTimer() {
     clearInterval(interval);
-    timeLeft = 600;
+    timeLeft = inputMinutes.value * 60;
     updateTimer();
 }
 

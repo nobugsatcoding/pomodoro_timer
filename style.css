@@ -27,8 +27,9 @@ body {
 }
 
 .button-wrapper {
-    display: inline-block;
-    max-width: 250px;
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    grid-template-rows: 50% 50%;
 }
 
 button {
@@ -46,28 +47,29 @@ button:hover {
 
 #start {
     background-color: #27ae60;
-    border-radius: 100% 0 0 0;
+    border-radius: 50% 0 0 50%;
     padding: 65px 15px 45px 35px;
-    width: 120px;
 }
 
 #stop {
     background-color: #c0392b;
-    border-radius: 0 0 0 100%;
+    border-radius: 0 50% 50% 0;
     padding: 45px 15px 65px 35px;
-    width: 120px;
+
 }
 
 #reset {
     background-color: #2025b0;
-    border-radius: 0 100% 0 0;
     padding: 65px 35px 45px 15px;
-    width: 120px;
+
 }
 
 #input {
     background-color: #bfcd24;
-    border-radius: 0 0% 100% 0;
     padding: 45px 35px 65px 15px;
-    width: 120px;
+
+}
+
+#inputMinutes{
+    max-width: 50px;
 }
